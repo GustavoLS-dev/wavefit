@@ -261,6 +261,10 @@
 .js .reveal[data-r="left"] { transform: translateX(-60px); }
 .js .reveal[data-r="right"] { transform: translateX(60px); }
 .js .reveal[data-r="zoom"] { transform: scale(.9); }
+/* no celular, nada entra pelos lados (evita a página "vazar" para a direita) */
+@media (max-width: 760px) {
+  .js .reveal[data-r="left"], .js .reveal[data-r="right"] { transform: translateY(40px); }
+}
 .js .reveal.is-in { opacity: 1; transform: var(--rest, none); filter: none; }
 .plan--featured { --rest: translateY(-10px); }
 /* fotos da estrutura: começam com zoom e "assentam" */
